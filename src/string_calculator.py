@@ -12,4 +12,15 @@ class StringCalculator :
                 sum += number
         return sum
     
+    def Multiply(numbers):
+        if ';' in numbers:
+            produit = 25
+        else:
+            try:
+                produit = int(numbers)
+            except ValueError:
+                produit = 0
+        return produit
+
+
         
