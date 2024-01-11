@@ -36,10 +36,11 @@ def test_add_plusieurs_nombres(mon_param, mon_resultat):
     assert somme == mon_resultat
 
 # test que la multiplication de "5;5" == 25
-def test_multiply_5_5_return_25():
-    # Arrange
-    mon_param = "5;5"
-    mon_resultat = 25
+@pytest.mark.parametrize("mon_param, mon_resultat", [
+    ("5;5", 25), #test case 1
+])    
+
+def test_multiply_5_5_return_25(mon_param, mon_resultat):
     # Act
     produit = StringCalculator.Multiply(mon_param)
     # Assert

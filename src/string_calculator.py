@@ -14,13 +14,13 @@ class StringCalculator :
     
     def Multiply(numbers):
         if ';' in numbers:
-            produit = 25
+            product = 25
         else:
             try:
-                produit = int(numbers)
+                product = int(numbers)
             except ValueError:
-                produit = 0
-        return produit
+                product = 0
+        return product
 
 
         
