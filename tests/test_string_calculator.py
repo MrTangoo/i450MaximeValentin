@@ -35,5 +35,17 @@ def test_add_plusieurs_nombres(mon_param, mon_resultat):
     # Assert
     assert somme == mon_resultat
 
+# test que la multiplication de "5;5" == 25
+def test_multiply_5_5_return_25():
+    # Arrange
+    mon_param = "5;5"
+    mon_resultat = 25
+    # Act
+    produit = StringCalculator.Multiply(mon_param)
+    # Assert
+    assert produit == mon_resultat
 
-
+# test que la multiplication de "5;3;2" == 30
+    
+    
+# test que la multiplication de "4" == 4
