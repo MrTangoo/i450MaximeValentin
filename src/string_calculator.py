@@ -13,14 +13,16 @@ class StringCalculator :
         return sum
     
     def Multiply(numbers):
-        if ';' in numbers:
-            product = 25
-        else:
-            try:
-                product = int(numbers)
+        parts = numbers.split(";")
+        sum = 1
+        for part in parts :
+            try :
+                number = int(part)
             except ValueError:
-                product = 0
-        return product
+                number = 0
+            if number <= 1000 :
+                sum *= number
+        return sum
 
 
         
