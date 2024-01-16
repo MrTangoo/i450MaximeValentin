@@ -58,6 +58,13 @@ def test_multiply_4_return_4(mon_param, mon_resultat):
     assert product == mon_resultat
 
 # test que la multiplication de "5;3;2" == 30
-    
+def test_multiply_5_3_2_return_30():
+    # Arrange
+    mon_param = "5;3;2"
+    mon_resultat = 30
+    # Act
+    product = StringCalculator.Multiply(mon_param)
+    # Assert
+    assert product == mon_resultat
     
     
