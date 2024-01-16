@@ -42,11 +42,21 @@ def test_add_plusieurs_nombres(mon_param, mon_resultat):
 
 def test_multiply_5_5_return_25(mon_param, mon_resultat):
     # Act
-    produit = StringCalculator.Multiply(mon_param)
+    product = StringCalculator.Multiply(mon_param)
     # Assert
-    assert produit == mon_resultat
+    assert product == mon_resultat
+
+# test que la multiplication de "4" == 4
+def test_multiply_4_return_4():
+    # Arrange
+    mon_param = "4"
+    mon_resultat = 4
+    # Act
+    product = StringCalculator.Multiply(mon_param)
+    # Assert
+    assert product == mon_resultat
 
 # test que la multiplication de "5;3;2" == 30
     
     
-# test que la multiplication de "4" == 4
+    
