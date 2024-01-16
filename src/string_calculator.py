@@ -14,15 +14,15 @@ class StringCalculator :
     
     def Multiply(numbers):
         parts = numbers.split(";")
-        sum = 1
+        product = 1
         for part in parts :
             try :
                 number = int(part)
             except ValueError:
                 number = 0
             if number <= 1000 :
-                sum *= number
-        return sum
+                product *= number
+        return product
 
 
         
