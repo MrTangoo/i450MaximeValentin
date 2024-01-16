@@ -47,10 +47,11 @@ def test_multiply_5_5_return_25(mon_param, mon_resultat):
     assert product == mon_resultat
 
 # test que la multiplication de "4" == 4
-def test_multiply_4_return_4():
-    # Arrange
-    mon_param = "4"
-    mon_resultat = 4
+@pytest.mark.parametrize("mon_param, mon_resultat", [
+    ("4", 4), #test case 1
+])     
+
+def test_multiply_4_return_4(mon_param, mon_resultat):
     # Act
     product = StringCalculator.Multiply(mon_param)
     # Assert
