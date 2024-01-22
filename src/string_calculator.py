@@ -19,7 +19,7 @@ class StringCalculator :
             try :
                 number = int(part)
             except ValueError:
-                number = 0
+                 raise ValueError("Invalid input: '{}' is not a valid number.".format(part))
             if number <= 1000 :
                 product *= number
         return product
