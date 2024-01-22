@@ -83,11 +83,13 @@ def test_multiply_avec_lettre_return_erreur(mon_param):
     # Assert
         StringCalculator.Multiply(mon_param)
 
-#test qu'avec des nombre a virgule ça marche
-def test_multiply_de_nombre_decimaux():
-    # Arrange
-    mon_param = "1.5;2"
-    mon_resultat = 3
+# test qu'avec des nombres a virgule ça marche
+@pytest.mark.parametrize("mon_param, mon_resultat", [
+    ("5.5;2", 11), #test case 1
+    ("2;2.5", 5), #test case 2
+])         
+    
+def test_multiply_de_nombre_decimaux(mon_param, mon_resultat):
     # Act
     product = StringCalculator.Multiply(mon_param)
     # Assert
