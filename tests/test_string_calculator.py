@@ -82,3 +82,13 @@ def test_multiply_avec_lettre_return_erreur(mon_param):
     with pytest.raises(ValueError, match="Invalid input:"):
     # Assert
         StringCalculator.Multiply(mon_param)
+
+#test qu'avec des nombre a virgule ça marche
+def test_multiply_de_nombre_decimaux():
+    # Arrange
+    mon_param = "1.5;2"
+    mon_resultat = 3
+    # Act
+    product = StringCalculator.Multiply(mon_param)
+    # Assert
+    assert product == mon_resultat
