@@ -70,4 +70,10 @@ def test_multiply_5_3_2_return_30(mon_param, mon_resultat):
     # Assert
     assert product == mon_resultat
     
-    
+# test qu'avec 5;a;3 il retourne une erreur
+def test_add_avec_lettre_return_erreur():
+  # Arrange
+    mon_param = "5;a;3"
+  # Act and Assert
+    with pytest.raises(ValueError, match="Invalid input:"):
+        StringCalculator.Multiply(mon_param)
