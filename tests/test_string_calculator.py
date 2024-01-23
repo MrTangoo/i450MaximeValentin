@@ -94,3 +94,13 @@ def test_multiply_de_nombre_decimaux(mon_param, mon_resultat):
     product = StringCalculator.Multiply(mon_param)
     # Assert
     assert product == mon_resultat
+
+#
+def test_multiply_paramvide_return_0():
+    #Arrange
+    mon_param=" "
+    mon_resultat=0
+    #Act
+    product = StringCalculator.Multiply(mon_param)
+    #Assert
+    assert product == mon_resultat
