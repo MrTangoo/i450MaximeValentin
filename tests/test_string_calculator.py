@@ -95,7 +95,7 @@ def test_multiply_de_nombre_decimaux(mon_param, mon_resultat):
     # Assert
     assert product == mon_resultat
 
-#
+# test qu'avec une chaîne vide en param retourne 0
 def test_multiply_paramvide_return_0():
     #Arrange
     mon_param=" "
