@@ -13,6 +13,8 @@ class StringCalculator :
         return sum
     
     def Multiply(numbers):
+        if not numbers.strip():
+            return 0
         parts = numbers.split(";")
         product = 1
         for part in parts :
