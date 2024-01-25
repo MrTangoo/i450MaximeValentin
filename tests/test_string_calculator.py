@@ -70,4 +70,37 @@ def test_multiply_5_3_2_return_30(mon_param, mon_resultat):
     # Assert
     assert product == mon_resultat
     
+# test qu'avec 5;a;3 il retourne une erreur
+@pytest.mark.parametrize("mon_param", [
+    ("5;a;2"), #test case 1
+    ("b;2;2"), #test case 2
+    ("2;4;c;2"), #test case 3
+])      
     
+def test_multiply_avec_lettre_return_erreur(mon_param):
+    # Act
+    with pytest.raises(ValueError, match="Invalid input:"):
+    # Assert
+        StringCalculator.Multiply(mon_param)
+
+# test qu'avec des nombres a virgule ça marche
+@pytest.mark.parametrize("mon_param, mon_resultat", [
+    ("5.5;2", 11), #test case 1
+    ("2;2.5", 5), #test case 2
+])         
+    
+def test_multiply_de_nombre_decimaux(mon_param, mon_resultat):
+    # Act
+    product = StringCalculator.Multiply(mon_param)
+    # Assert
+    assert product == mon_resultat
+
+# test qu'avec une chaîne vide en param retourne 0
+def test_multiply_paramvide_return_0():
+    #Arrange
+    mon_param=" "
+    mon_resultat=0
+    #Act
+    product = StringCalculator.Multiply(mon_param)
+    #Assert
+    assert product == mon_resultat

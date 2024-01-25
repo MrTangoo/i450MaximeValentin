@@ -13,13 +13,15 @@ class StringCalculator :
         return sum
     
     def Multiply(numbers):
+        if not numbers.strip():
+            return 0
         parts = numbers.split(";")
         product = 1
         for part in parts :
             try :
-                number = int(part)
+                number = float(part)
             except ValueError:
-                number = 0
+                 raise ValueError("Invalid input: '{}' is not a valid number.".format(part))
             if number <= 1000 :
                 product *= number
         return product
