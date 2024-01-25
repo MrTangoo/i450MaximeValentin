@@ -1,4 +1,4 @@
-from src.string_calculator import StringCalculator
+from string_calculator import StringCalculator
 import pytest
 
 def test_add_param_vide_return_zero():
